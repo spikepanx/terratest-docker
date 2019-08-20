@@ -1,8 +1,8 @@
 FROM golang:alpine
 LABEL Author="sudokar <sudokar@yahoo.com>"
 
-ENV TERRAFORM_VERSION=0.12.4
-ENV AWSWEEPER_VERSION=0.3.2
+ARG TERRAFORM_VERSION=0.11.14
+ARG AWSWEEPER_VERSION=0.3.2
 
 RUN apk add --update --no-cache wget git gcc musl-dev && \
   wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
